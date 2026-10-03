@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://desac0qfmliwu"]
+
+[ext_resource type="Script" path="res://scripts/DestructibleProp.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/HealthComponent.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/HurtboxComponent.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://msp01ljou26p" path="res://Assets/Tiles/tile_0067.png" id="4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hurt"]
+size = Vector2(18, 18)
+
+[node name="DestructibleProp" type="StaticBody2D"]
+collision_layer = 1
+collision_mask = 0
+script = ExtResource("1")
+max_health = 20.0
+
+[node name="Shadow" type="Polygon2D" parent="."]
+position = Vector2(0, 8)
+color = Color(0, 0, 0, 0.28)
+polygon = PackedVector2Array(9, 0, 6.4, 3.5, 0, 5, -6.4, 3.5, -9, 0, -6.4, -3.5, 0, -5, 6.4, -3.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("4")
+scale = Vector2(1.6, 1.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_body")
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("2")
+max_health = 20.0
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_hurt")
