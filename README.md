@@ -242,4 +242,15 @@ with interactive lessons and real projects.
 - New to Godot? **[2D Roguelike: Top-Down Controller](https://codingquests.io/quests/2d-roguelike-controller?utm_source=github&utm_medium=resource&utm_campaign=godot_hitbox_hurtbox)**
   builds the movement and dash this project starts from. Free, 8 lessons.
 
+## More Free Godot Resources from CodingQuests
+
+Other free, MIT-licensed Godot 4 projects that work well next to this one:
+
+- **[Top-Down Controller](https://github.com/CodingQuests/godot-top-down-controller)**: 8-direction movement, mouse aim, a dash with i-frames and a follow camera with shake.
+- **[Enemy AI](https://github.com/CodingQuests/godot-enemy-ai)**: Four enemy types and a three-pattern boss on one shared state machine, with attacks you can read.
+- **[Game Feel Lab](https://github.com/CodingQuests/godot-game-feel-lab)**: One sword swing split into seven layers you can switch on and off while the game runs.
+- **[Stats and Leveling](https://github.com/CodingQuests/godot-stats-leveling)**: Health and mana pools, attributes, modifiers tagged by source, an XP curve and stat points.
+
+All twelve are listed on the [CodingQuests GitHub profile](https://github.com/CodingQuests).
+
 Made by [CodingQuests](https://codingquests.io/?utm_source=github&utm_medium=resource&utm_campaign=godot_hitbox_hurtbox).
